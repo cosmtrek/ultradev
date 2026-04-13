@@ -1,19 +1,48 @@
 # ultradev
 
-`ultradev` is a repository of skills focused on helping developer agents do
-high-quality software work.
+Practical skills that help developer agents do high-quality software work.
 
-The goal of this repo is not to collect generic prompts. It is to curate
-practical, reliable skills that help agents:
+Works with Claude Code, Codex, Cursor, and any agent that reads SKILL.md.
 
-- make better engineering decisions
-- simplify and strengthen existing code
-- validate changes before claiming completion
-- build and ship higher-quality software
+## Install
 
-Each skill should be narrowly scoped, operational, and useful in real
-development workflows. Prefer skills that improve correctness, maintainability,
-testing discipline, and delivery quality.
+```bash
+npx skills add cosmtrek/ultradev
+```
+
+To install a single skill instead of all:
+
+```bash
+npx skills add cosmtrek/ultradev/simplify-changes
+```
+
+## Skills
+
+| Skill | Description |
+|-------|-------------|
+| [simplify-changes](simplify-changes/) | Review changed code for reuse, quality, and efficiency, then fix issues found |
+
+## Usage
+
+After installation, invoke a skill by name in your agent:
+
+```
+/simplify-changes
+```
+
+Or ask the agent to use it:
+
+> run simplify-changes on my current changes
+
+## Repository Structure
+
+Each skill lives in its own directory with a `SKILL.md` file:
+
+```text
+ultradev/
+  <skill-name>/
+    SKILL.md
+```
 
 ## Scope
 
@@ -25,26 +54,6 @@ This repository is focused on skills for software development work, including:
 - refactoring and maintainability
 - testing and release readiness
 
-## Structure
-
-This is a multi-skill repository.
-
-Each skill lives in its own directory and is defined by a `SKILL.md` file:
-
-```text
-ultradev/
-  <skill-name>/
-    SKILL.md
-```
-
-## Repository Direction
-
-Skills in this repository should help developer agents produce software that is:
-
-- correct
-- maintainable
-- well-verified
-- production-ready
-
-If a proposed skill does not clearly improve software quality or developer
-effectiveness, it probably does not belong here.
+Each skill should be narrowly scoped, operational, and useful in real
+development workflows. If a proposed skill does not clearly improve software
+quality or developer effectiveness, it probably does not belong here.
