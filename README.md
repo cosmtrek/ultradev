@@ -21,6 +21,7 @@ npx skills add cosmtrek/ultradev/simplify-changes
 | Skill | Description |
 |-------|-------------|
 | [simplify-changes](simplify-changes/) | Review changed code for reuse, quality, and efficiency, then fix issues found |
+| [teardown](teardown/) | Read a project and produce three ASCII diagrams (context, container, main-flow sequence) showing its inner anatomy |
 
 ## Usage
 
